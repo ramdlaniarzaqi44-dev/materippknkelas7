@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Interaktif PPKn Kelas 7 - Wilayah NKRI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #f8fafc; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        /* Animations */
+        .fade-in-up { animation: fadeInUp 0.6s ease-out forwards; opacity: 0; transform: translateY(20px); }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+
+        /* active nav state */
+        .nav-active {
+            background-color: #eff6ff;
+            color: #2563eb;
+            border-left: 4px solid #2563eb;
+            font-weight: 600;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="text-gray-700 antialiased relative">
+
+    <!-- Top Navigation -->
+    <nav class="bg-blue-700 text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-white text-blue-700 p-2 rounded-lg">
+                        <i class="fas fa-book-open text-xl"></i>
+                    </div>
+                    <span class="font-bold text-lg md:text-xl tracking-wide">E-Modul PPKn Kelas 7</span>
+                </div>
+                <div class="hidden md:block text-blue-200 text-sm font-medium">
+                    Kurikulum Merdeka
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-gradient-to-br from-blue-600 to-indigo-800 text-white py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight fade-in-up" style="animation-delay: 0.1s;">Wilayah Negara Kesatuan Republik Indonesia</h1>
+            <p class="text-lg md:text-xl text-blue-100 mb-8 max-w-2xl mx-auto fade-in-up" style="animation-delay: 0.2s;">
+                Pelajari pengertian, unsur, batas wilayah, sejarah, hingga sikap dalam menjaga keutuhan NKRI secara interaktif.
+            </p>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row gap-8 relative">
+        
+        <!-- Mobile Navigation (Horizontal Scroll) -->
+        <div class="md:hidden overflow-x-auto whitespace-nowrap pb-2 sticky top-[64px] z-40 bg-[#f8fafc] pt-2">
+            <ul class="flex space-x-2">
+                <li><a href="#bab1" class="inline-block px-4 py-2 bg-white rounded-full shadow-sm text-sm font-medium text-gray-600 border hover:border-blue-500">1. Pengertian</a></li>
+                <li><a href="#bab2" class="inline-block px-4 py-2 bg-white rounded-full shadow-sm text-sm font-medium text-gray-600 border hover:border-blue-500">2. Unsur Negara</a></li>
+                <li><a href="#bab3" class="inline-block px-4 py-2 bg-white rounded-full shadow-sm text-sm font-medium text-gray-600 border hover:border-blue-500">3. Wilayah</a></li>
+                <li><a href="#bab4" class="inline-block px-4 py-2 bg-white rounded-full shadow-sm text-sm font-medium text-gray-600 border hover:border-blue-500">4. Batas NKRI</a></li>
+                <li><a href="#bab5" class="inline-block px-4 py-2 bg-white rounded-full shadow-sm text-sm font-medium text-gray-600 border hover:border-blue-500">5. Sejarah</a></li>
+                <li><a href="#bab6" class="inline-block px-4 py-2 bg-white rounded-full shadow-sm text-sm font-medium text-gray-600 border hover:border-blue-500">6. Pasal UUD</a></li>
+                <li><a href="#bab7" class="inline-block px-4 py-2 bg-white rounded-full shadow-sm text-sm font-medium text-gray-600 border hover:border-blue-500">7. Sikap</a></li>
+            </ul>
+        </div>
+
+        <!-- Desktop Sidebar -->
+        <aside class="hidden md:block w-1/4 flex-shrink-0">
+            <div class="sticky top-24 bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
+                <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Daftar Isi</h3>
+                <nav id="toc" class="space-y-1">
+                    <a href="#bab1" class="toc-link block px-4 py-3 rounded-lg text-sm text-gray-600 hover:bg-gray-50 transition-colors border-l-4 border-transparent"><i class="fas fa-university w-5"></i> 1. Pengertian Negara</a>
+                    <a href="#bab2" class="toc-link block px-4 py-3 rounded-lg text-sm text-gray-600 hover:bg-gray-50 transition-colors border-l-4 border-transparent"><i class="fas fa-cubes w-5"></i> 2. Unsur Terbentuknya</a>
+                    <a href="#bab3" class="toc-link block px-4 py-3 rounded-lg text-sm text-gray-600 hover:bg-gray-50 transition-colors border-l-4 border-transparent"><i class="fas fa-water w-5"></i> 3. Wilayah Darat & Laut</a>
+                    <a href="#bab4" class="toc-link block px-4 py-3 rounded-lg text-sm text-gray-600 hover:bg-gray-50 transition-colors border-l-4 border-transparent"><i class="fas fa-map-marked-alt w-5"></i> 4. Batas Wilayah</a>
+                    <a href="#bab5" class="toc-link block px-4 py-3 rounded-lg text-sm text-gray-600 hover:bg-gray-50 transition-colors border-l-4 border-transparent"><i class="fas fa-history w-5"></i> 5. Sejarah Wilayah</a>
+                    <a href="#bab6" class="toc-link block px-4 py-3 rounded-lg text-sm text-gray-600 hover:bg-gray-50 transition-colors border-l-4 border-transparent"><i class="fas fa-gavel w-5"></i> 6. Pasal UUD 1945</a>
+                    <a href="#bab7" class="toc-link block px-4 py-3 rounded-lg text-sm text-gray-600 hover:bg-gray-50 transition-colors border-l-4 border-transparent"><i class="fas fa-hands-helping w-5"></i> 7. Sikap & Karakter</a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="w-full md:w-3/4 space-y-10 pb-20">
+
+            <!-- BAB 1 -->
+            <section id="bab1" class="scroll-mt-24 glass-card rounded-2xl shadow-sm border border-gray-100 p-8 fade-in-up">
+                <div class="flex items-center mb-6">
+                    <div class="bg-blue-100 text-blue-600 w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold mr-4">1</div>
+                    <h2 class="text-2xl font-bold text-gray-800">Pengertian Negara</h2>
+                </div>
+                
+                <div class="prose max-w-none text-gray-600 leading-relaxed space-y-4">
+                    <p>Secara etimologis (asal usul kata), istilah "negara" di Indonesia berasal dari bahasa Sanskerta, yaitu <b>"nagara"</b> atau <b>"nagari"</b> yang berarti kota, wilayah, atau penguasa. Istilah ini sering ditemukan pada masa kerajaan Nusantara, seperti Majapahit dengan kitab <i>Negarakertagama</i>.</p>
+                    
+                    <div class="bg-indigo-50 border-l-4 border-indigo-500 p-5 rounded-r-lg my-6">
+                        <h4 class="font-bold text-indigo-800 mb-2"><i class="fas fa-quote-left mr-2"></i>Menurut Ahli: Prof. Miriam Budiardjo</h4>
+                        <p class="text-indigo-900 italic">"Negara adalah suatu organisasi dalam suatu wilayah yang dapat memaksakan kekuasaannya secara sah terhadap semua golongan kekuasaan lainnya dan yang dapat menetapkan tujuan-tujuan dari kehidupan bersama itu."</p>
+                    </div>
+
+                    <p>Dari definisi di atas, dapat disimpulkan bahwa negara dibentuk agar masyarakat yang majemuk dapat hidup teratur, memiliki hukum yang mengikat, dan memiliki wadah untuk mencapai cita-cita bersama. Tanpa negara, manusia akan rentan kembali pada hukum rimba (yang kuat yang menang).</p>
+                </div>
+            </section>
+
+            <!-- BAB 2 -->
+            <section id="bab2" class="scroll-mt-24 glass-card rounded-2xl shadow-sm border border-gray-100 p-8 fade-in-up">
+                <div class="flex items-center mb-6">
+                    <div class="bg-blue-100 text-blue-600 w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold mr-4">2</div>
+                    <h2 class="text-2xl font-bold text-gray-800">Unsur-Unsur Terbentuknya Negara</h2>
+                </div>
+                
+                <p class="text-gray-600 mb-6">Berdasarkan Konvensi Montevideo 1933, sebuah entitas dapat diakui sebagai negara sah jika memenuhi dua kategori unsur berikut:</p>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Konstitutif -->
+                    <div class="bg-white border-2 border-green-100 rounded-xl p-6 relative overflow-hidden group hover:border-green-300 transition">
+                        <div class="absolute top-0 right-0 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">Unsur Mutlak</div>
+                        <h3 class="text-lg font-bold text-green-700 mb-4"><i class="fas fa-lock mr-2"></i>Konstitutif</h3>
+                        <p class="text-sm text-gray-600 mb-4">Syarat yang <b>wajib/mutlak</b> ada saat negara didirikan:</p>
+                        <ul class="space-y-3 text-sm text-gray-700">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i> <span><b>Rakyat:</b> Penduduk menetap (warga negara sah) maupun warga asing di wilayah tersebut.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i> <span><b>Wilayah:</b> Batas darat, laut, dan udara yang jelas.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i> <span><b>Pemerintah Berdaulat:</b> Otoritas tertinggi yang dihormati rakyatnya (ke dalam) dan bebas dari campur tangan asing (ke luar).</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Deklaratif -->
+                    <div class="bg-white border-2 border-amber-100 rounded-xl p-6 relative overflow-hidden group hover:border-amber-300 transition">
+                        <div class="absolute top-0 right-0 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">Unsur Tambahan</div>
+                        <h3 class="text-lg font-bold text-amber-700 mb-4"><i class="fas fa-handshake mr-2"></i>Deklaratif</h3>
+                        <p class="text-sm text-gray-600 mb-4">Syarat tambahan untuk keperluan hubungan internasional:</p>
+                        <ul class="space-y-3 text-sm text-gray-700">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-amber-500 mt-1 mr-2"></i> <span><b>Pengakuan De Facto:</b> Pengakuan berdasarkan fakta/kenyataan bahwa sebuah negara sudah berdiri.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-amber-500 mt-1 mr-2"></i> <span><b>Pengakuan De Jure:</b> Pengakuan resmi berdasarkan hukum internasional. Memungkinkan dibukanya Kedutaan Besar (diplomatik).</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BAB 3 -->
+            <section id="bab3" class="scroll-mt-24 glass-card rounded-2xl shadow-sm border border-gray-100 p-8 fade-in-up">
+                <div class="flex items-center mb-6">
+                    <div class="bg-blue-100 text-blue-600 w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold mr-4">3</div>
+                    <h2 class="text-2xl font-bold text-gray-800">Wilayah Negara (Darat, Laut, Udara)</h2>
+                </div>
+                
+                <div class="space-y-6">
+                    <!-- Accordion Item 1 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="w-full bg-gray-50 px-6 py-4 flex justify-between items-center text-left font-bold text-gray-700 hover:bg-gray-100" onclick="toggleAccordion('acc1', 'icon1')">
+                            <span><i class="fas fa-mountain text-amber-600 w-6"></i> Wilayah Daratan</span>
+                            <i id="icon1" class="fas fa-chevron-down transition-transform"></i>
+                        </button>
+                        <div id="acc1" class="px-6 py-4 bg-white hidden border-t border-gray-200">
+                            <p class="text-sm text-gray-600">Daerah di permukaan bumi dalam batas-batas tertentu yang diukur menggunakan titik koordinat. Batas darat bisa berupa perbatasan alam (sungai, pegunungan), buatan (pagar, tembok), maupun astronomis.</p>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 2 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="w-full bg-gray-50 px-6 py-4 flex justify-between items-center text-left font-bold text-gray-700 hover:bg-gray-100" onclick="toggleAccordion('acc2', 'icon2')">
+                            <span><i class="fas fa-water text-blue-500 w-6"></i> Wilayah Perairan / Laut</span>
+                            <i id="icon2" class="fas fa-chevron-down transition-transform"></i>
+                        </button>
+                        <div id="acc2" class="px-6 py-4 bg-white border-t border-gray-200 text-sm text-gray-600">
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li><b>Laut Teritorial (12 Mil):</b> Ditarik dari garis pangkal pantai terluar saat air surut. Negara punya kedaulatan mutlak di sini.</li>
+                                <li><b>Zona Bersebelahan (24 Mil):</b> Negara berhak melakukan pengawasan untuk mencegah pelanggaran bea cukai, imigrasi, dan sanitasi.</li>
+                                <li><b>Zona Ekonomi Eksklusif / ZEE (200 Mil):</b> Negara memiliki <i>hak eksklusif</i> untuk mengeksplorasi dan memanfaatkan kekayaan alam (seperti menangkap ikan), namun tidak memiliki kedaulatan wilayah penuh (kapal asing bebas lewat).</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 3 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="w-full bg-gray-50 px-6 py-4 flex justify-between items-center text-left font-bold text-gray-700 hover:bg-gray-100" onclick="toggleAccordion('acc3', 'icon3')">
+                            <span><i class="fas fa-plane text-sky-500 w-6"></i> Wilayah Udara & Ekstrateritorial</span>
+                            <i id="icon3" class="fas fa-chevron-down transition-transform"></i>
+                        </button>
+                        <div id="acc3" class="px-6 py-4 bg-white hidden border-t border-gray-200 text-sm text-gray-600">
+                            <p class="mb-3"><b>Wilayah Udara:</b> Ruang udara yang berada di atas wilayah daratan dan lautan. Menurut Konvensi Chicago, negara memiliki kedaulatan eksklusif di ruang udaranya, namun dibatasi hingga batas ruang angkasa (luar angkasa adalah milik bersama).</p>
+                            <p><b>Wilayah Ekstrateritorial:</b> Wilayah suatu negara yang secara nyata berada di wilayah negara lain, tetapi hukum internasional mengakuinya sebagai daerah kekuasaan negara tersebut. <i>Contoh: Gedung Kedutaan Besar RI di negara asing.</i></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BAB 4 -->
+            <section id="bab4" class="scroll-mt-24 glass-card rounded-2xl shadow-sm border border-gray-100 p-8 fade-in-up">
+                <div class="flex items-center mb-6">
+                    <div class="bg-blue-100 text-blue-600 w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold mr-4">4</div>
+                    <h2 class="text-2xl font-bold text-gray-800">Batas-Batas Wilayah Indonesia</h2>
+                </div>
+                
+                <p class="text-gray-600 mb-6">Sebagai negara kepulauan, Indonesia memiliki batas darat dan batas laut dengan berbagai negara tetangga:</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-white p-4 border rounded-lg shadow-sm border-t-4 border-t-red-400">
+                        <h4 class="font-bold text-gray-800 mb-2"><i class="far fa-compass mr-2 text-red-500"></i>Utara</h4>
+                        <ul class="text-sm text-gray-600 list-disc pl-4">
+                            <li><b>Darat:</b> Malaysia (Pulau Kalimantan)</li>
+                            <li><b>Laut:</b> Malaysia, Singapura, Filipina, Thailand, Vietnam.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-4 border rounded-lg shadow-sm border-t-4 border-t-blue-400">
+                        <h4 class="font-bold text-gray-800 mb-2"><i class="far fa-compass mr-2 text-blue-500"></i>Selatan</h4>
+                        <ul class="text-sm text-gray-600 list-disc pl-4">
+                            <li><b>Darat:</b> Timor Leste (Pulau Timor)</li>
+                            <li><b>Laut:</b> Perairan Australia dan Samudra Hindia.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-4 border rounded-lg shadow-sm border-t-4 border-t-yellow-400">
+                        <h4 class="font-bold text-gray-800 mb-2"><i class="far fa-compass mr-2 text-yellow-500"></i>Timur</h4>
+                        <ul class="text-sm text-gray-600 list-disc pl-4">
+                            <li><b>Darat:</b> Papua Nugini (Pulau Papua)</li>
+                            <li><b>Laut:</b> Samudra Pasifik.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-4 border rounded-lg shadow-sm border-t-4 border-t-green-400">
+                        <h4 class="font-bold text-gray-800 mb-2"><i class="far fa-compass mr-2 text-green-500"></i>Barat</h4>
+                        <ul class="text-sm text-gray-600 list-disc pl-4">
+                            <li><b>Darat:</b> Tidak ada berbatasan darat langsung.</li>
+                            <li><b>Laut:</b> Samudra Hindia dan Perairan India.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BAB 5 -->
+            <section id="bab5" class="scroll-mt-24 glass-card rounded-2xl shadow-sm border border-gray-100 p-8 fade-in-up">
+                <div class="flex items-center mb-6">
+                    <div class="bg-blue-100 text-blue-600 w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold mr-4">5</div>
+                    <h2 class="text-2xl font-bold text-gray-800">Sejarah Penentuan Batas Wilayah</h2>
+                </div>
+
+                <div class="relative border-l-2 border-blue-200 ml-4 py-2 space-y-8">
+                    <!-- Timeline Item 1 -->
+                    <div class="relative pl-8">
+                        <div class="absolute w-4 h-4 bg-gray-400 rounded-full -left-[9px] top-1 border-2 border-white shadow"></div>
+                        <h4 class="font-bold text-gray-800 text-lg">Sebelum 1957: Ordonansi Belanda (TZMKO 1939)</h4>
+                        <p class="text-sm text-gray-600 mt-1">Batas laut Indonesia hanya <b>3 mil laut</b> dari setiap pulau. Akibatnya, laut di antara pulau-pulau Nusantara menjadi perairan internasional yang bebas dilalui kapal asing. Laut menjadi <i>pemisah</i> antar pulau.</p>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="relative pl-8">
+                        <div class="absolute w-4 h-4 bg-blue-500 rounded-full -left-[9px] top-1 border-2 border-white shadow"></div>
+                        <h4 class="font-bold text-blue-700 text-lg">13 Desember 1957: Deklarasi Djuanda</h4>
+                        <p class="text-sm text-gray-600 mt-1">Perdana Menteri Djuanda Kartawidjaja mendeklarasikan <b>Wawasan Nusantara</b>. Garis batas ditarik dari titik terluar pulau terluar, mengubah laut dari pemisah menjadi <i>pemersatu</i> kesatuan wilayah (Archipelagic State).</p>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="relative pl-8">
+                        <div class="absolute w-4 h-4 bg-green-500 rounded-full -left-[9px] top-1 border-2 border-white shadow"></div>
+                        <h4 class="font-bold text-green-700 text-lg">1982: Pengesahan PBB (UNCLOS)</h4>
+                        <p class="text-sm text-gray-600 mt-1">Konsepsi negara kepulauan Indonesia secara resmi diakui dunia internasional melalui <b>United Nations Convention on the Law of the Sea (UNCLOS)</b> di Jamaika. Wilayah Indonesia bertambah luas secara signifikan tanpa letusan peluru.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BAB 6 -->
+            <section id="bab6" class="scroll-mt-24 glass-card rounded-2xl shadow-sm border border-gray-100 p-8 fade-in-up">
+                <div class="flex items-center mb-6">
+                    <div class="bg-blue-100 text-blue-600 w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold mr-4">6</div>
+                    <h2 class="text-2xl font-bold text-gray-800">Pasal-Pasal UUD 1945 Terkait Wilayah</h2>
+                </div>
+                
+                <div class="grid gap-4">
+                    <div class="bg-gradient-to-r from-slate-50 to-white p-5 rounded-lg border border-slate-200 shadow-sm flex flex-col md:flex-row gap-4 items-start md:items-center">
+                        <div class="bg-slate-800 text-white font-bold px-4 py-2 rounded shadow shrink-0">Pasal 1 ayat (1)</div>
+                        <p class="text-gray-700 italic text-sm md:text-base">"Negara Indonesia ialah Negara Kesatuan, yang berbentuk Republik." (Menegaskan bentuk negara bukan serikat/federal).</p>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-blue-50 to-white p-5 rounded-lg border border-blue-200 shadow-sm flex flex-col md:flex-row gap-4 items-start md:items-center">
+                        <div class="bg-blue-600 text-white font-bold px-4 py-2 rounded shadow shrink-0">Pasal 25A</div>
+                        <p class="text-gray-700 italic text-sm md:text-base">"Negara Kesatuan Republik Indonesia adalah sebuah negara kepulauan yang berciri Nusantara dengan wilayah yang batas-batas dan hak-haknya ditetapkan dengan undang-undang."</p>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-green-50 to-white p-5 rounded-lg border border-green-200 shadow-sm flex flex-col md:flex-row gap-4 items-start md:items-center">
+                        <div class="bg-green-600 text-white font-bold px-4 py-2 rounded shadow shrink-0">Pasal 33 ayat (3)</div>
+                        <p class="text-gray-700 italic text-sm md:text-base">"Bumi dan air dan kekayaan alam yang terkandung di dalamnya dikuasai oleh negara dan dipergunakan untuk sebesar-besar kemakmuran rakyat."</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BAB 7 -->
+            <section id="bab7" class="scroll-mt-24 glass-card rounded-2xl shadow-sm border border-gray-100 p-8 fade-in-up">
+                <div class="flex items-center mb-6">
+                    <div class="bg-blue-100 text-blue-600 w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold mr-4">7</div>
+                    <h2 class="text-2xl font-bold text-gray-800">Sikap Menjaga Keutuhan Wilayah NKRI</h2>
+                </div>
+                
+                <p class="text-gray-600 mb-6">Untuk menjaga keutuhan darat, laut, dan udara Nusantara dari ancaman disintegrasi (perpecahan), terdapat sikap yang harus kita kembangkan dan yang harus kita buang jauh-jauh:</p>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Sikap Dikembangkan -->
+                    <div class="bg-green-50 p-6 rounded-xl border border-green-200">
+                        <h3 class="text-lg font-bold text-green-800 mb-4 flex items-center"><i class="fas fa-thumbs-up mr-2 text-2xl"></i> Harus Dikembangkan</h3>
+                        <ul class="space-y-3 text-sm text-green-900">
+                            <li class="flex items-start"><i class="fas fa-check mt-1 mr-2"></i> <span><b>Toleransi & Gotong Royong:</b> Menghargai perbedaan SARA (Suku, Agama, Ras, Antargolongan).</span></li>
+                            <li class="flex items-start"><i class="fas fa-check mt-1 mr-2"></i> <span><b>Patriotisme & Nasionalisme:</b> Cinta tanah air dan rela berkorban (misal: menaati aturan hukum/sekolah, berprestasi).</span></li>
+                            <li class="flex items-start"><i class="fas fa-check mt-1 mr-2"></i> <span><b>Literasi Digital (Saring sebelum Sharing):</b> Melakukan verifikasi fakta <i>(tabayyun)</i> agar tidak terprovokasi hoaks.</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Sikap Dihindari -->
+                    <div class="bg-red-50 p-6 rounded-xl border border-red-200">
+                        <h3 class="text-lg font-bold text-red-800 mb-4 flex items-center"><i class="fas fa-thumbs-down mr-2 text-2xl"></i> Harus Dihindari</h3>
+                        <ul class="space-y-3 text-sm text-red-900">
+                            <li class="flex items-start"><i class="fas fa-times mt-1 mr-2"></i> <span><b>Etnosentrisme & Chauvinisme:</b> Fanatisme berlebihan yang mengagungkan suku/negaranya sendiri dan merendahkan yang lain.</span></li>
+                            <li class="flex items-start"><i class="fas fa-times mt-1 mr-2"></i> <span><b>Separatisme:</b> Paham atau gerakan untuk memisahkan diri dari negara sah dan membentuk negara baru.</span></li>
+                            <li class="flex items-start"><i class="fas fa-times mt-1 mr-2"></i> <span><b>Penyebaran Hoaks & Ujaran Kebencian:</b> Memanfaatkan media sosial untuk memecah belah masyarakat.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 text-center mt-10">
+        <div class="max-w-4xl mx-auto px-4">
+            <p class="text-gray-400 text-sm">Modul Pembelajaran Interaktif PPKn Kelas 7 - Kurikulum Merdeka.</p>
+            <p class="text-gray-500 text-xs mt-2">© 2026. Dibuat untuk tujuan pendidikan.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Accordion Logic
+        function toggleAccordion(accId, iconId) {
+            const content = document.getElementById(accId);
+            const icon = document.getElementById(iconId);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Scrollspy Logic for Sidebar
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section[id]");
+            const navLinks = document.querySelectorAll(".toc-link");
+
+            const observerOptions = {
+                root: null,
+                rootMargin: "-20% 0px -60% 0px", // adjust when section activates
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute("id");
+                        
+                        // Remove active class from all
+                        navLinks.forEach(link => {
+                            link.classList.remove("nav-active");
+                            // reset styling classes managed by nav-active CSS
+                        });
+
+                        // Add active class to current
+                        const activeLink = document.querySelector(`.toc-link[href="#${id}"]`);
+                        if(activeLink) {
+                            activeLink.classList.add("nav-active");
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
